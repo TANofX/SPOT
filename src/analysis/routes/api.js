@@ -4,6 +4,7 @@ const axios = require("axios")
 const config = require("../../../config/config.json");
 
 let router = Router();
+var useCachedData;
 
 router.get("/dataset", async (req, res) => {
     res.json(await executeAnalysisPipeline())
@@ -21,7 +22,10 @@ router.get("/teams", async (req, res) => {
         headers: {
             "X-TBA-Auth-Key": config.secrets.TBA_API_KEY
         }
-    }).catch(e => console.log(e,chalk.bold.red("\nError fetching teams from Blue Alliance API!")))).data;
+    }).catch(e =>{
+        console.log(e,chalk.bold.red("\nError fetching teams from Blue Alliance API!"));
+        useCachedData = true
+})).data;
     res.json(tbaTeams)
 })
 

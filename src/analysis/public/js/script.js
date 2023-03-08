@@ -36,6 +36,7 @@ if ('serviceWorker' in navigator) {
 	showFade(app)
 
 	//data fetchers
+	/*
 	async function fetchDataset() {
 		return await fetch("./api/dataset").then(res => res.json())
 	}
@@ -47,6 +48,33 @@ if ('serviceWorker' in navigator) {
 			return acc
 		}, {})
 	}
+	*/
+	async function fetchDataset() {
+		const cachedData = localStorage.getItem("dataset");
+		if (cachedData) {
+			return JSON.parse(cachedData);
+		} else {
+			const data = await fetch("./api/dataset").then(res => res.json());
+			localStorage.setItem("dataset", JSON.stringify(data));
+			return data;
+		}
+	}
+	
+	async function fetchTeams() {
+		const cachedData = localStorage.getItem("teams");
+		if (cachedData) {
+			return JSON.parse(cachedData);
+		} else {
+			const teams = await fetch(`/analysis/api/teams`).then(res => res.json());
+			const data = teams.reduce((acc, t) => {
+				acc[t.team_number] = t.nickname
+				return acc
+			}, {});
+			localStorage.setItem("teams", JSON.stringify(data));
+			return data;
+		}
+	}
+	
 
 	//team UI functions
 	async function loadTeams(dataset, modulesConfig) {
