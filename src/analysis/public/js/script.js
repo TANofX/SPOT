@@ -49,12 +49,36 @@ if ('serviceWorker' in navigator) {
 		}, {})
 	}
 	*/
+
+	/*
+	1 - check if online data is reachable
+		- reachable if fetch returns a response with a 200 response code
+		- 400/500 is no bueno
+	2 - if it's reachable, put it in a global variable so other functions can read it
+	3 - otherwise, put cached data in the global variable
+	if you put it in the same global variable it doesn't matter which one loads because they all access it from the same place
+	or you can make a getter function
+	*/	
 	async function fetchDataset() {
 		const cachedData = localStorage.getItem("dataset");
+		const data = await fetch("./api/dataset").then(res=>res.json())
+		console.log(data)
+		if(data > 350){
+			console.log("greter than")
+		}
+		else{
+			console.log("less than")
+		}
 		if (cachedData) {
+			console.log("DATA CACHED: ")
+			console.log(JSON.parse(cachedData))
+			console.log("CACHED DATA ABOVEEEEE ^^^^^")
 			return JSON.parse(cachedData);
 		} else {
+			console.log("DATA NOT CACHED: ")
 			const data = await fetch("./api/dataset").then(res => res.json());
+			console.log(data)
+			console.log("DATA ABOVEEEEEEEE ^^^^")
 			localStorage.setItem("dataset", JSON.stringify(data));
 			return data;
 		}
