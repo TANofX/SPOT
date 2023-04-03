@@ -73,7 +73,9 @@ class ScoutingSync {
             headers: {
                 "X-TBA-Auth-Key": config.secrets.TBA_API_KEY
             }
-        }).catch(e => console.log(e,chalk.bold.red("\nError fetching matches from Blue Alliance Api!")))).data;
+        }).catch(async e => {console.log(e,chalk.bold.red("\nError fetching matches from Blue Alliance Api!"));
+            return await matches.readFile();
+    })).data;//return data from file if error
 
         //determine match numbers linearly (eg. if there are 10 quals, qf1 would be match 11)
         const matchLevels = ["qm", "ef", "qf", "sf", "f"];
@@ -104,7 +106,7 @@ class ScoutingSync {
 
         //sort the processed matches by number
         processedMatches = processedMatches.sort((a,b) => a.number - b.number);
-
+        // write processedMatches to file
         return processedMatches;
     }
 
