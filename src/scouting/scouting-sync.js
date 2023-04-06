@@ -10,6 +10,7 @@ const axios = require("axios");
 const config = require("../../config/config.json");
 const chalk = require("chalk");
 const DEMO = false;
+const fs = require('fs')
 module.exports = (server) => {
     if (!ScoutingSync.initialized) {
         if (!server) {
@@ -73,8 +74,10 @@ class ScoutingSync {
             headers: {
                 "X-TBA-Auth-Key": config.secrets.TBA_API_KEY
             }
-        }).catch(async e => {console.log(e,chalk.bold.red("\nError fetching matches from Blue Alliance Api!"));
-            return await matches.readFile();
+        }).catch(e => {console.log(e,chalk.bold.red("\nError fetching matches from Blue Alliance Api! Using cached data."));
+            return fs.readFile("matches.json", "utf8", (err,data) => {
+                console.log(data)
+            })
     })).data;//return data from file if error
 
         //determine match numbers linearly (eg. if there are 10 quals, qf1 would be match 11)
@@ -107,6 +110,11 @@ class ScoutingSync {
         //sort the processed matches by number
         processedMatches = processedMatches.sort((a,b) => a.number - b.number);
         // write processedMatches to file
+        fs.writeFile("matches.json", processedMatches, (err) => {
+            if (err)
+              console.log(err);
+          });
+
         return processedMatches;
     }
 
