@@ -110,11 +110,14 @@ class ScoutingSync {
         //sort the processed matches by number
         processedMatches = processedMatches.sort((a,b) => a.number - b.number);
         // write processedMatches to file
-        fs.writeFile("matches.json", processedMatches, (err) => {
-            if (err)
-              console.log(err);
-          });
-
+        
+        fs.writeFileSync("matches.json", JSON.stringify(processedMatches),"utf-8");
+        let data = fs.readFileSync("matches.json")
+        let testString = String.fromCharCode(...data)
+        console.log("attempted conversion")
+        console.log(testString)
+        console.log("retrieved data")
+        console.log(data)
         return processedMatches;
     }
 
