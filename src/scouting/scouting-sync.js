@@ -74,13 +74,27 @@ class ScoutingSync {
             headers: {
                 "X-TBA-Auth-Key": config.secrets.TBA_API_KEY
             }
+        }).then((res)=>{
+            console.log("ran then")
+            var processed = []
+            for(let match of res.data){
+                let copy = {...match}
+                delete copy.score_breakdown
+                processed.push(copy)
+            }
+            fs.writeFileSync("matches.json", JSON.stringify(processed),"utf-8");
+            return res
         }).catch(e => {console.log(e,chalk.bold.red("\nError fetching matches from Blue Alliance Api! Using cached data."));
-            return fs.readFile("matches.json", "utf8", (err,data) => {
+            let data = fs.readFileSync("matches.json")
+            let returnData = JSON.parse(String.fromCharCode(...data))
+            // console.log(returnData)
+            return {data:returnData}
+            /*fs.readFileSync("matches.json", "utf8", (err,data) => {
                 console.log(data)
-            })
+            })*/
     })).data;//return data from file if error
-
         //determine match numbers linearly (eg. if there are 10 quals, qf1 would be match 11)
+        // console.log(tbaMatches)
         const matchLevels = ["qm", "ef", "qf", "sf", "f"];
         let levelCounts = {};
         for (let level of matchLevels) {
@@ -96,6 +110,7 @@ class ScoutingSync {
         let processedMatches = [];
 
         //add the level offset to each match and simplify structure
+        console.log(tbaMatches[0])
         for (let match of tbaMatches) {
             processedMatches.push({
                 number: match.match_number + levelOffsets[match.comp_level], //adjust match number with the offset
@@ -111,13 +126,13 @@ class ScoutingSync {
         processedMatches = processedMatches.sort((a,b) => a.number - b.number);
         // write processedMatches to file
         
-        fs.writeFileSync("matches.json", JSON.stringify(processedMatches),"utf-8");
+        // fs.writeFileSync("matches.json", JSON.stringify(processedMatches),"utf-8");
         let data = fs.readFileSync("matches.json")
         let testString = String.fromCharCode(...data)
-        console.log("attempted conversion")
-        console.log(testString)
-        console.log("retrieved data")
-        console.log(data)
+        // console.log("attempted conversion")
+        // console.log(testString)
+        // console.log("retrieved data")
+        // console.log(data)
         return processedMatches;
     }
 
