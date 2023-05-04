@@ -64,18 +64,16 @@ if ('serviceWorker' in navigator) {
 		const data = await fetch("./api/dataset").then(res=>res.json())
 		console.log(data)
 		if(data > 350){
-			console.log("greter than")
+			if(cachedData){
+				console.error("\nError fetching dataset! Using cached data.")
+				return JSON.parse(cachedData);
+			}
+			else{
+				console.error("\nError fetching dataset! No cached data available!")
+			}
+			
 		}
 		else{
-			console.log("less than")
-		}
-		if (cachedData) {
-			console.log("DATA CACHED: ")
-			console.log(JSON.parse(cachedData))
-			console.log("CACHED DATA ABOVEEEEE ^^^^^")
-			return JSON.parse(cachedData);
-		} else {
-			console.log("DATA NOT CACHED: ")
 			const data = await fetch("./api/dataset").then(res => res.json());
 			console.log(data)
 			console.log("DATA ABOVEEEEEEEE ^^^^")
@@ -86,10 +84,18 @@ if ('serviceWorker' in navigator) {
 	
 	async function fetchTeams() {
 		const cachedData = localStorage.getItem("teams");
-		if (cachedData) {
+		const data = await fetch("./api/teams").then(res=>res.json())
+		if (data> 350) {
+			if(cachedData){
+				console.error("\nError fetching teams! Using cached data.")
 			return JSON.parse(cachedData);
+			}
+			else{
+				console.error("\nError fetching teams! No cached data available!")
+			}
+			
 		} else {
-			const teams = await fetch(`/analysis/api/teams`).then(res => res.json());
+			const teams = await fetch(`./api/teams`).then(res => res.json());
 			const data = teams.reduce((acc, t) => {
 				acc[t.team_number] = t.nickname
 				return acc
@@ -177,10 +183,34 @@ if ('serviceWorker' in navigator) {
 		//console.log("teams type and size: " + typeof(teams)+teams.length+teams[0])  
 		// compare the teams to get avg win probabilities
 		//compareAllTeams(teams)
-		let teamsProbability = fetch('/analysis/autopick')
+
+
+		const cachedAutoPickData = localStorage.getItem("autopick");
+		const autoPickData = await fetch("./autopick").then(res=>res.json()).catch(()=>{
+			console.error("there was an error with fetching the autopicklist")
+		})
+		console.log(autoPickData)
+		console.log("AUTO PICK DATA ^^^^")
+		let teamsProbability
+		console.log(autoPickData)
+		if(autoPickData > 350){
+			if(cachedAutoPickData){
+				console.error("\nError fetching auto pick data! Using cached data.")
+				teamsProbability = JSON.parse(cachedAutoPickData);
+			}
+			else{
+				console.error("\nError fetching auto pick data! No cached data available!")
+			}
+		}
+		else{
+			teamsProbability = autoPickData
+			localStorage.setItem("autopick", JSON.stringify(autoPickData));
+		}
+
+
 		for(let i = 0; i < teams.length; i++){
 			for(let j = 0; j < teamsProbability.length; j++){
-				if (teams[i].robotNumber = teamsProbability[j].robotNumber){
+				if (teams[i].robotNumber == teamsProbability[j].robotNumber){
 					setPath(teams[i],"avgProbability",getPath(teamsProbability[j],"avgProbability",0))
 				}
 			}

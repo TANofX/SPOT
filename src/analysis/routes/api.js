@@ -2,7 +2,7 @@ const { Router } = require("express");
 const executeAnalysisPipeline = require("../analysisPipeline.js")
 const axios = require("axios")
 const config = require("../../../config/config.json");
-
+const chalk  =require("chalk")
 let router = Router();
 var useCachedData;
 
@@ -24,7 +24,9 @@ router.get("/teams", async (req, res) => {
         }
     }).catch(e =>{
         console.log(e,chalk.bold.red("\nError fetching teams from Blue Alliance API!"));
-        useCachedData = true
+        return {
+            "data":[]
+        }
 })).data;
     res.json(tbaTeams)
 })
