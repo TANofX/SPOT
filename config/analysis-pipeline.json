@@ -113,7 +113,6 @@
             ]
         }
     },
-
     {  
         "type": "team",
         "name": "average",
@@ -132,14 +131,6 @@
     },
     {
         "type": "team",
-        "name": "countActions",
-        "outputPath": "counts",
-        "options": {
-            "all": true
-        }
-    },
-    {
-        "type": "team",
         "name": "sum",
         "outputPath": "counts.notes",
         "options": {
@@ -148,6 +139,43 @@
                 "counts.scoreSpeaker",
                 "counts.scoreAmpedSpeaker",
                 "counts.miss"
+            ]
+        }
+    },
+    {  
+        "type": "team",
+        "name": "sum",
+        "outputPath": "counts.scoreSpeaker",
+        "options": {
+            "addends": [
+                "counts.scoreSubwoofer",
+                "counts.scoreWing",
+                "counts.scorePodium",
+                "counts.scoreMidfield"
+            ]
+        }
+    },
+    {  
+        "type": "team",
+        "name": "sum",
+        "outputPath": "counts.scoreAmpedSpeaker",
+        "options": {
+            "addends": [
+                "counts.scoreAmpedSubwoofer",
+                "counts.scoreAmpedWing",
+                "counts.scoreAmpedPodium",
+                "counts.scoreAmpedMidfield"
+            ]
+        }
+    },
+    {  
+        "type": "team",
+        "name": "sum",
+        "outputPath": "CountsTotalSpeaker",
+        "options": {
+            "addends": [
+                "counts.scoreAmpedSpeaker",
+                "counts.scoreSpeaker"
             ]
         }
     },

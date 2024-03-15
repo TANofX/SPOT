@@ -286,5 +286,55 @@
                 }
             ]
         }
+    },
+    {
+        "view": "team",
+        "module": "Pie",
+        "position": "main",
+        "name": "Shot Distribution",
+        "options": {
+            "slices": [
+                {
+                    "name": "Amp",
+                    "path": "counts.scoreAmp"
+                },
+                
+                {
+                    "name": "Total Speaker",
+                    "path": "CountsTotalSpeaker"
+                },
+               
+                {
+                    "name": "Miss",
+                    "path": "counts.miss"
+                }
+            ]
+        }
+    },
+    {
+        "view": "team",
+        "module": "Pie",
+        "position": "main",
+        "name": "Shot Location Distribution",
+        "options": {
+            "slices": [
+                {
+                    "name": "Subwoofer",
+                    "path": "CountsTotalSubwoofer"
+                },
+                {
+                    "name": "Wing",
+                    "path": "CountsTotalWing"
+                },
+                {
+                    "name": "Podium",
+                    "path": "CountsTotalPodium"
+                },
+                {
+                    "name": "Midfield",
+                    "path": "CountsTotalMidfield"
+                }
+            ]
+        }
     }
 ]
