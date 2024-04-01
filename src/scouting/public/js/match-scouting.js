@@ -65,23 +65,41 @@ var previousTimer = [];
         "undo": (button) => {
             button.element.addEventListener("click", () => {
                 const undoneId = actionQueue.pop().id //remove the last action from the action queue 
-                const undoneButton = buttons.find(x => x.id === undoneId);
+                const undoneButton = buttons.find(x => x.id === undoneId); // this gets the id of the last button that was pressed 
 
                 //special case for match-control buttons which have extra undo funcitonality without executables
                 if (undoneButton.type === "match-control") {
+                    console.log("undoing match control")
                     time = matchScoutingConfig.timing.totalTime; //reset timer
                     ScoutingSync.updateState({status: ScoutingSync.SCOUTER_STATUS.WAITING}); //tell the server that you are now waiting to start
-                    clearInterval(undoneButton.timerInterval); //clear the timing interval
-                    undoneButton.element.innerText = "Start Match";
+
+
+                    clearInterval(undoneButton.timerInterval); //clear the timing interval // also need to look into how clearInterval works 
+                    undoneButton.element.innerText = "Start Match"; // does not function 
+                    undoneButton.displayText = "Test"; // does not function
+
+                    console.log(undoneButton); 
+
+
                     timerActive = false;
-                    showLayer(0);
+
+
+                    //showLayer(0); // showLayer method does not function properly, method is called but not displayed 
+                    console.log("showing layer 0"); 
                 }
+
+
+                console.log(undoneButton.executables); 
 
                 for (const executable of undoneButton.executables) {
                     executables[executable.type].reverse(undoneButton,layers,...executable.args) //reverse any executables associated with the undone button
                 }
+
                 doExecutables(button,time)
-				updateLastAction()
+                
+				        updateLastAction()
+
+                console.log("Undoing last action"); 
             })
         },
 
@@ -202,6 +220,7 @@ var previousTimer = [];
       for (const b of buttons) {
             b.element.style.display = "none";
       }
+
       if(Object.keys(conditional).length > 0){
         var renderedButtons = [] 
         for (let button of layers[layer]) {
