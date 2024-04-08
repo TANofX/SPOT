@@ -49,6 +49,8 @@ var previousTimer = [];
     const layers = deepClone(matchScoutingConfig.layout.layers);
     const buttons = layers.flat();
 
+    console.log("We are building the buttons...");
+
     const buttonBuilders = { //an object to give buttons type specific things, button type: function (button)
         "action": (button) => {
             //add an action to the actionQueue
@@ -62,6 +64,7 @@ var previousTimer = [];
             })
         },
 
+        
         "undo": (button) => {
             button.element.addEventListener("click", () => {
                 const undoneId = actionQueue.pop().id //remove the last action from the action queue 
@@ -82,24 +85,22 @@ var previousTimer = [];
 
 
                     timerActive = false;
-
-
                     //showLayer(0); // showLayer method does not function properly, method is called but not displayed 
-                    console.log("showing layer 0"); 
                 }
 
 
-                console.log(undoneButton.executables); 
+                console.log("undoing button "+undoneButton.id+"... but we haven't undone the executables yet"); 
 
                 for (const executable of undoneButton.executables) {
                     executables[executable.type].reverse(undoneButton,layers,...executable.args) //reverse any executables associated with the undone button
+                    // The reverse method isnt being called... although we are supplying the right arguments, the function is not properly being called 
+                    console.log("we have reversed the executable function of " + executable.type + ". The arguments are " + executable.args);
                 }
 
                 doExecutables(button,time)
                 
 				        updateLastAction()
 
-                console.log("Undoing last action"); 
             })
         },
 
