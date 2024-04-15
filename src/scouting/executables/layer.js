@@ -5,7 +5,6 @@
  */
 executables["layer"] = {
     execute(button,layers,fromLayer,toLayer) {
-        console.log("Transitioning to layer "+toLayer+" from layer "+fromLayer+"...");
         for (let button of layers.flat()) { //hide all buttons
             button.element.style.display = "none"
         }
@@ -17,15 +16,12 @@ executables["layer"] = {
         previousLayers.push(renderedButtons)
     },
     reverse(button,layers,fromLayer,toLayer) {
-        console.log("Reversing layer transition..."); 
         for (let button of layers.flat()) { //hide all buttons
             button.element.style.display = "none"
         }
         previousLayers.pop();
-        previousLayers.pop();
-        console.log("These are the previous layers.."+previousLayers)
-        for (let button of previousLayers[previousLayers.length-1]) {
-              
+
+        for (let button of previousLayers[previousLayers.length-1]) { 
           button.element.style.display = "flex"
         }
     }

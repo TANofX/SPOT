@@ -63,14 +63,13 @@ var previousTimer = [];
 				updateLastAction()
             })
         },
-
         
         "undo": (button) => {
             button.element.addEventListener("click", () => {
                 const undoneId = actionQueue.pop().id //remove the last action from the action queue 
                 const undoneButton = buttons.find(x => x.id === undoneId); // this gets the id of the last button that was pressed 
 
-                //special case for match-control buttons which have extra undo funcitonality without executables
+                //special case for match-control buttons which have extra undo functionality without executables
                 if (undoneButton.type === "match-control") {
                     console.log("undoing match control")
                     time = matchScoutingConfig.timing.totalTime; //reset timer
@@ -88,8 +87,6 @@ var previousTimer = [];
                     //showLayer(0); // showLayer method does not function properly, method is called but not displayed 
                 }
 
-
-                console.log("undoing button "+undoneButton.id+"... but we haven't undone the executables yet"); 
 
                 for (const executable of undoneButton.executables) {
                     executables[executable.type].reverse(undoneButton,layers,...executable.args) //reverse any executables associated with the undone button
