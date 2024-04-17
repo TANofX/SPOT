@@ -1,4 +1,13 @@
 /* Adjust css for smaller screens (e.g., mobile devices) */
 @media screen and (max-width: 768px) {
-    
+    #sidebar {
+        grid-area: 3 / 1 / 4 / 2;
+        background-color: var(--bg-alt);
+        padding: 16px;
+        height: calc(100vh - 75px);
+        overflow: auto;
+        display: grid;
+        min-height: 0;
+        grid-template-rows: auto auto 1fr;
+      }
 }
