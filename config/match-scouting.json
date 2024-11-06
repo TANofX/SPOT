@@ -1,13 +1,13 @@
 {
   "timing": {
-    "totalTime": 153000,
+    "totalTime": 100000,
     "timeTransitions": {
-      "152999": {
+      "99999": {
         "layer": 1,
         "displayText": "Auto",
         "variables": {}
       },
-      "135000": {
+      "93000": {
         "layer": 2,
         "displayText": "Teleop",
         "variables": {}
@@ -24,7 +24,7 @@
           "id": "startGame",
           "displayText": "Start",
           "gridArea": ["2", "1", "4", "10"],
-          "class": "silver timer",
+          "class": "pink timer",
           "type": "match-control",
           "executables": [
             {
@@ -38,7 +38,7 @@
           "id": "preloadNote",
           "displayText": "Preload Note",
           "gridArea": ["4", "1", "6", "5"],
-          "class": "orange",
+          "class": "pink",
           "type": "action",
           "executables": []
         },
@@ -46,7 +46,7 @@
           "id": "preloadNone",
           "displayText": "Preload None",
           "gridArea": ["4", "6", "6", "10"],
-          "class": "gray",
+          "class": "pink",
           "type": "action",
           "executables": []
         }
