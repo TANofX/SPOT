@@ -2,12 +2,12 @@
   "timing": {
     "totalTime": 153000,
     "timeTransitions": {
-      "152999": {
+      "99999": {
         "layer": 1,
         "displayText": "Auto",
         "variables": {}
       },
-      "135000": {
+      "93000": {
         "layer": 2,
         "displayText": "Teleop",
         "variables": {}
