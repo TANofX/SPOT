@@ -156,3 +156,15 @@
   bottom: 10px;
   transform: translateX(-50%);
 }
+
+#landing .buttonz {
+  font-size: 3em;
+  line-height: 1em;
+  margin-bottom: 5px;
+  color: var(--dark-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 20px 2px 2px;
+}

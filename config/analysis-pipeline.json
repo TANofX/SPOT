@@ -493,6 +493,15 @@
     }
   },
   {
+    "type":"team",
+    "name": "sum",
+    "outputPath": "counts.missanddrop",
+    "options": {
+      "addends": ["counts.miss", "counts.drop"]
+
+    }
+  },
+  {
     "type": "team",
     "name": "countMatches",
     "outputPath": "temp.totalTimeMs",

@@ -227,6 +227,36 @@
       ]
     }
   },
+    {
+    "view": "team",
+    "module": "PerformanceTimePlot",
+    "name": "Auto Note Pickup Time",
+    "position": "main",
+    "options": {
+      "trackedStats": [
+        "autoNoteTimes.ampMost",
+        "autoNoteTimes.ampMid",
+        "autoNoteTimes.middle",
+        "autoNoteTimes.sourceMid",
+        "autoNoteTimes.sourceMost",
+        "autoNoteTimes.wing"
+      ]
+    }
+  },
+  {
+    "view": "team",
+    "module": "Bar",
+    "position": "main",
+    "name": "miss",
+    "options": {
+      "bars": [
+        {
+          "name": "miss",
+          "path": "counts.missanddrop"
+        }
+      ]
+    }
+  },
   {
     "view": "match",
     "module": "SingleDisplay",
