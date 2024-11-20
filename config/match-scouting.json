@@ -38,7 +38,7 @@
           "id": "preloadNote",
           "displayText": "Preload Note",
           "gridArea": ["4", "1", "6", "5"],
-          "class": "orange",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -46,7 +46,7 @@
           "id": "preloadNone",
           "displayText": "Preload None",
           "gridArea": ["4", "6", "6", "10"],
-          "class": "gray",
+          "class": "red",
           "type": "action",
           "executables": []
         }
@@ -56,7 +56,7 @@
           "id": "startGame",
           "displayText": "Start",
           "gridArea": ["1", "4", "2", "7"],
-          "class": "silver timer",
+          "class": "red",
           "type": "match-control",
           "executables": []
         },
@@ -80,7 +80,7 @@
           "id": "undo",
           "displayText": "Undo",
           "gridArea": ["1", "8", "2", "10"],
-          "class": "pink",
+          "class": "red",
           "type": "undo",
           "executables": []
         },
@@ -88,7 +88,7 @@
           "id": "groundPickup",
           "displayText": "Ground",
           "gridArea": ["3", "8", "4", "10"],
-          "class": "orange",
+          "class": "red",
           "type": "none",
           "executables": [
             {
@@ -101,7 +101,7 @@
           "id": "leave",
           "displayText": "Leave",
           "gridArea": ["6", "8", "7", "10"],
-          "class": "gray",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -109,7 +109,7 @@
           "id": "scoreAmp",
           "displayText": "Score Amp",
           "gridArea": ["6", "1", "7", "3"],
-          "class": "green",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -117,7 +117,7 @@
           "id": "scoreSubwoofer",
           "displayText": "Subwoofer",
           "gridArea": ["6", "4", "7", "7"],
-          "class": "gray",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -125,7 +125,7 @@
           "id": "scoreWing",
           "displayText": "Wing",
           "gridArea": ["4", "4", "5", "7"],
-          "class": "gray",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -133,7 +133,7 @@
           "id": "scorePodium",
           "displayText": "Podium",
           "gridArea": ["5", "4", "6", "7"],
-          "class": "gray",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -141,7 +141,7 @@
           "id": "scoreMidfield",
           "displayText": "Midfield",
           "gridArea": ["3", "4", "4", "7"],
-          "class": "gray",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -149,7 +149,7 @@
           "id": "drop",
           "displayText": "Drop",
           "gridArea": ["5", "8", "6", "9"],
-          "class": "yellow",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -167,7 +167,7 @@
           "id": "startGame",
           "displayText": "Start",
           "gridArea": ["1", "4", "2", "7"],
-          "class": "silver timer",
+          "class": "red",
           "type": "match-control",
           "executables": []
         },
@@ -183,7 +183,7 @@
           "id": "undo",
           "displayText": "Undo",
           "gridArea": ["1", "8", "2", "10"],
-          "class": "pink",
+          "class": "red",
           "type": "undo",
           "executables": []
         },
@@ -191,7 +191,7 @@
           "id": "groundPickup",
           "displayText": "Ground",
           "gridArea": ["3", "8", "4", "10"],
-          "class": "orange",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -199,7 +199,7 @@
           "id": "sourcePickup",
           "displayText": "Source",
           "gridArea": ["3", "1", "4", "3"],
-          "class": "orange",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -207,7 +207,7 @@
           "id": "park",
           "displayText": "Park",
           "gridArea": ["6", "8", "7", "10"],
-          "class": "gray",
+          "class": "red",
           "type": "action",
           "executables": [
             {
@@ -220,7 +220,7 @@
           "id": "scoreAmp",
           "displayText": "Score Amp",
           "gridArea": ["6", "1", "7", "3"],
-          "class": "green",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -228,7 +228,7 @@
           "id": "amplify",
           "displayText": "Amplify",
           "gridArea": ["5", "1", "6", "3"],
-          "class": "green",
+          "class": "red",
           "type": "action",
           "executables": [
             {
@@ -241,7 +241,7 @@
           "id": "scoreSubwoofer",
           "displayText": "Subwoofer",
           "gridArea": ["6", "4", "7", "7"],
-          "class": "gray",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -249,7 +249,7 @@
           "id": "scoreWing",
           "displayText": "Wing",
           "gridArea": ["4", "4", "5", "7"],
-          "class": "gray",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -257,7 +257,7 @@
           "id": "scorePodium",
           "displayText": "Podium",
           "gridArea": ["5", "4", "6", "7"],
-          "class": "gray",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -265,7 +265,7 @@
           "id": "scoreMidfield",
           "displayText": "Midfield",
           "gridArea": ["3", "4", "4", "7"],
-          "class": "gray",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -273,7 +273,7 @@
           "id": "drop",
           "displayText": "Drop",
           "gridArea": ["5", "8", "6", "9"],
-          "class": "yellow",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -291,7 +291,7 @@
           "id": "startGame",
           "displayText": "Start",
           "gridArea": ["1", "4", "2", "7"],
-          "class": "silver timer",
+          "class": "red",
           "type": "match-control",
           "executables": []
         },
@@ -307,7 +307,7 @@
           "id": "undo",
           "displayText": "Undo",
           "gridArea": ["1", "8", "2", "10"],
-          "class": "pink",
+          "class": "red",
           "type": "undo",
           "executables": []
         },
@@ -315,7 +315,7 @@
           "id": "groundPickup",
           "displayText": "Ground",
           "gridArea": ["3", "8", "4", "10"],
-          "class": "orange",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -323,7 +323,7 @@
           "id": "sourcePickup",
           "displayText": "Source",
           "gridArea": ["3", "1", "4", "3"],
-          "class": "orange",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -331,7 +331,7 @@
           "id": "park",
           "displayText": "Park",
           "gridArea": ["6", "8", "7", "10"],
-          "class": "gray",
+          "class": "red",
           "type": "action",
           "executables": [
             {
@@ -344,7 +344,7 @@
           "id": "scoreAmp",
           "displayText": "Score Amp",
           "gridArea": ["6", "1", "7", "3"],
-          "class": "green",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -352,7 +352,7 @@
           "id": "endAmp",
           "displayText": "End Amp",
           "gridArea": ["5", "1", "6", "3"],
-          "class": "green",
+          "class": "red",
           "type": "action",
           "executables": [
             {
@@ -365,7 +365,7 @@
           "id": "scoreAmpedSubwoofer",
           "displayText": "Subwoofer",
           "gridArea": ["6", "4", "7", "7"],
-          "class": "green",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -373,7 +373,7 @@
           "id": "scoreAmpedWing",
           "displayText": "Wing",
           "gridArea": ["4", "4", "5", "7"],
-          "class": "green",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -381,7 +381,7 @@
           "id": "scoreAmpedPodium",
           "displayText": "Podium",
           "gridArea": ["5", "4", "6", "7"],
-          "class": "green",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -389,7 +389,7 @@
           "id": "scoreAmpedMidfield",
           "displayText": "Midfield",
           "gridArea": ["3", "4", "4", "7"],
-          "class": "green",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -397,7 +397,7 @@
           "id": "drop",
           "displayText": "Drop",
           "gridArea": ["5", "8", "6", "9"],
-          "class": "yellow",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -415,7 +415,7 @@
           "id": "startGame",
           "displayText": "Start",
           "gridArea": ["1", "4", "2", "7"],
-          "class": "silver timer",
+          "class": "red",
           "type": "match-control",
           "executables": []
         },
@@ -431,7 +431,7 @@
           "id": "undo",
           "displayText": "Undo",
           "gridArea": ["1", "8", "2", "10"],
-          "class": "pink",
+          "class": "red",
           "type": "undo",
           "executables": []
         },
@@ -439,7 +439,7 @@
           "id": "onstage",
           "displayText": "Onstage/Climb",
           "gridArea": ["3", "4", "4", "7"],
-          "class": "gray",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -455,7 +455,7 @@
           "id": "harmony",
           "displayText": "Harmony",
           "gridArea": ["3", "1", "4", "3"],
-          "class": "gray",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -463,7 +463,7 @@
           "id": "spotlit",
           "displayText": "Spotlit",
           "gridArea": ["6", "8", "7", "10"],
-          "class": "gray",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -471,7 +471,7 @@
           "id": "trap",
           "displayText": "Trap",
           "gridArea": ["6", "4", "7", "7"],
-          "class": "gray",
+          "class": "red",
           "type": "action",
           "executables": []
         },
@@ -479,7 +479,7 @@
           "id": "unpark",
           "displayText": "Unpark",
           "gridArea": ["6", "1", "7", "3"],
-          "class": "orange",
+          "class": "red",
           "type": "action",
           "executables": [
             {
@@ -494,7 +494,7 @@
           "id": "startGame",
           "displayText": "Start",
           "gridArea": ["1", "4", "2", "7"],
-          "class": "silver timer",
+          "class": "red",
           "type": "match-control",
           "executables": []
         },
@@ -502,7 +502,7 @@
           "id": "undo",
           "displayText": "Undo",
           "gridArea": ["1", "8", "2", "10"],
-          "class": "pink",
+          "class": "red",
           "type": "undo",
           "executables": []
         },
@@ -523,7 +523,7 @@
           "id": "autoNoteWing",
           "displayText": "Wing",
           "gridArea": ["3", "8", "6", "10"],
-          "class": "navy",
+          "class": "red",
           "type": "action",
           "executables": [
             {
@@ -536,7 +536,7 @@
           "id": "autoNoteSourceMost",
           "displayText": "O",
           "gridArea": ["2", "5", "3", "6"],
-          "class": "orange",
+          "class": "red",
           "type": "action",
           "executables": [
             {
@@ -549,7 +549,7 @@
           "id": "autoNoteSourceMid",
           "displayText": "O",
           "gridArea": ["3", "5", "4", "6"],
-          "class": "orange",
+          "class": "red",
           "type": "action",
           "executables": [
             {
@@ -562,7 +562,7 @@
           "id": "autoNoteMiddle",
           "displayText": "O",
           "gridArea": ["4", "5", "5", "6"],
-          "class": "orange",
+          "class": "red",
           "type": "action",
           "executables": [
             {
@@ -575,7 +575,7 @@
           "id": "autoNoteAmpMid",
           "displayText": "O",
           "gridArea": ["5", "5", "6", "6"],
-          "class": "orange",
+          "class": "red",
           "type": "action",
           "executables": [
             {
@@ -588,7 +588,7 @@
           "id": "autoNoteAmpMost",
           "displayText": "O",
           "gridArea": ["6", "5", "7", "6"],
-          "class": "orange",
+          "class": "red",
           "type": "action",
           "executables": [
             {
@@ -603,7 +603,7 @@
           "id": "startGame",
           "displayText": "Start",
           "gridArea": ["1", "4", "2", "7"],
-          "class": "silver timer",
+          "class": "red",
           "type": "match-control",
           "executables": []
         },
@@ -611,7 +611,7 @@
           "id": "undo",
           "displayText": "Undo",
           "gridArea": ["1", "8", "2", "10"],
-          "class": "pink",
+          "class": "red",
           "type": "undo",
           "executables": []
         },
@@ -619,7 +619,7 @@
           "id": "autoNoteWing",
           "displayText": "Wing",
           "gridArea": ["3", "1", "6", "3"],
-          "class": "navy",
+          "class": "red",
           "type": "action",
           "executables": [
             {
@@ -645,7 +645,7 @@
           "id": "autoNoteAmpMost",
           "displayText": "O",
           "gridArea": ["2", "5", "3", "6"],
-          "class": "orange",
+          "class": "red",
           "type": "action",
           "executables": [
             {
@@ -658,7 +658,7 @@
           "id": "autoNoteAmpMid",
           "displayText": "O",
           "gridArea": ["3", "5", "4", "6"],
-          "class": "orange",
+          "class": "red",
           "type": "action",
           "executables": [
             {
@@ -671,7 +671,7 @@
           "id": "autoNoteMiddle",
           "displayText": "O",
           "gridArea": ["4", "5", "5", "6"],
-          "class": "orange",
+          "class": "red",
           "type": "action",
           "executables": [
             {
@@ -684,7 +684,7 @@
           "id": "autoNoteSourceMid",
           "displayText": "O",
           "gridArea": ["5", "5", "6", "6"],
-          "class": "orange",
+          "class": "red",
           "type": "action",
           "executables": [
             {
@@ -697,7 +697,7 @@
           "id": "autoNoteSourceMost",
           "displayText": "O",
           "gridArea": ["6", "5", "7", "6"],
-          "class": "orange",
+          "class": "red",
           "type": "action",
           "executables": [
             {

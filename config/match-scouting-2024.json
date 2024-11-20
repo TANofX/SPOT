@@ -32,7 +32,7 @@
           "displayText": "Start",
           "gridArea": ["1", "4", "2", "7"],
           "class": "silver timer",
-          "type": "match-control",
+        "type": "match-control",
           "executables": []
         },
         {
