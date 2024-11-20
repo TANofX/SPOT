@@ -88,7 +88,7 @@
           "id": "groundPickup",
           "displayText": "Ground",
           "gridArea": ["3", "8", "4", "10"],
-          "class": "pink",
+          "class": "lightpink",
           "type": "none",
           "executables": [
             {
@@ -199,7 +199,7 @@
           "id": "sourcePickup",
           "displayText": "Source",
           "gridArea": ["3", "1", "4", "3"],
-          "class": "darkpink",
+          "class": "pink",
           "type": "action",
           "executables": []
         },
@@ -207,7 +207,7 @@
           "id": "park",
           "displayText": "Park",
           "gridArea": ["6", "8", "7", "10"],
-          "class": "lightpink",
+          "class": "pink",
           "type": "action",
           "executables": [
             {
@@ -291,7 +291,7 @@
           "id": "startGame",
           "displayText": "Start",
           "gridArea": ["1", "4", "2", "7"],
-          "class": "silver timer",
+          "class": "pink timer",
           "type": "match-control",
           "executables": []
         },
@@ -299,7 +299,7 @@
           "id": "broken",
           "displayText": "Disabled",
           "gridArea": ["1", "1", "2", "3"],
-          "class": "red",
+          "class": "hotpink",
           "type": "action",
           "executables": []
         },
@@ -307,7 +307,7 @@
           "id": "undo",
           "displayText": "Undo",
           "gridArea": ["1", "8", "2", "10"],
-          "class": "pink",
+          "class": "lightpink",
           "type": "undo",
           "executables": []
         },
@@ -315,7 +315,7 @@
           "id": "groundPickup",
           "displayText": "Ground",
           "gridArea": ["3", "8", "4", "10"],
-          "class": "orange",
+          "class": "pink",
           "type": "action",
           "executables": []
         },
@@ -323,7 +323,7 @@
           "id": "sourcePickup",
           "displayText": "Source",
           "gridArea": ["3", "1", "4", "3"],
-          "class": "orange",
+          "class": "pink",
           "type": "action",
           "executables": []
         },
@@ -331,7 +331,7 @@
           "id": "park",
           "displayText": "Park",
           "gridArea": ["6", "8", "7", "10"],
-          "class": "gray",
+          "class": "lightpink",
           "type": "action",
           "executables": [
             {
@@ -344,7 +344,7 @@
           "id": "scoreAmp",
           "displayText": "Score Amp",
           "gridArea": ["6", "1", "7", "3"],
-          "class": "green",
+          "class": "hotpink",
           "type": "action",
           "executables": []
         },
@@ -352,7 +352,7 @@
           "id": "endAmp",
           "displayText": "End Amp",
           "gridArea": ["5", "1", "6", "3"],
-          "class": "green",
+          "class": "hotpink",
           "type": "action",
           "executables": [
             {
@@ -365,7 +365,7 @@
           "id": "scoreAmpedSubwoofer",
           "displayText": "Subwoofer",
           "gridArea": ["6", "4", "7", "7"],
-          "class": "green",
+          "class": "pink",
           "type": "action",
           "executables": []
         },
@@ -373,7 +373,7 @@
           "id": "scoreAmpedWing",
           "displayText": "Wing",
           "gridArea": ["4", "4", "5", "7"],
-          "class": "green",
+          "class": "pink",
           "type": "action",
           "executables": []
         },
@@ -381,7 +381,7 @@
           "id": "scoreAmpedPodium",
           "displayText": "Podium",
           "gridArea": ["5", "4", "6", "7"],
-          "class": "green",
+          "class": "pink",
           "type": "action",
           "executables": []
         },
@@ -389,7 +389,7 @@
           "id": "scoreAmpedMidfield",
           "displayText": "Midfield",
           "gridArea": ["3", "4", "4", "7"],
-          "class": "green",
+          "class": "pink",
           "type": "action",
           "executables": []
         },
@@ -397,7 +397,7 @@
           "id": "drop",
           "displayText": "Drop",
           "gridArea": ["5", "8", "6", "9"],
-          "class": "yellow",
+          "class": "hotpink",
           "type": "action",
           "executables": []
         },
@@ -405,7 +405,7 @@
           "id": "miss",
           "displayText": "Miss",
           "gridArea": ["5", "9", "6", "10"],
-          "class": "red",
+          "class": "hotpink",
           "type": "action",
           "executables": []
         }
