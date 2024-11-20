@@ -133,7 +133,7 @@
           "id": "scorePodium",
           "displayText": "Podium",
           "gridArea": ["5", "4", "6", "7"],
-          "class": "light pink"
+          "class": "light pink",
           "type": "action",
           "executables": []
         },
