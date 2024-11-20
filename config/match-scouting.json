@@ -1,8 +1,8 @@
 {
   "timing": {
-    "totalTime": 100000,
+    "totalTime": 150000,
     "timeTransitions": {
-      "99999": {
+      "149000": {
         "layer": 1,
         "displayText": "Auto",
         "variables": {}
