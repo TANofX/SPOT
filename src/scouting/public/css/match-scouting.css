@@ -70,7 +70,19 @@
 }
 
 .pink {
-  background-color: #f06292;
+  background-color: #ff80bc;
+}
+
+.light pink {
+  background-color: #ffd1e7;
+}
+
+.hot pink {
+  background-color: #ff409b;
+}
+
+.dark pink{
+  background-color:#d18aac;
 }
 
 .yellow {
