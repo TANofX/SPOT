@@ -7,7 +7,7 @@
         "displayText": "Auto",
         "variables": {}
       },
-      "93000": {
+      "134999": {
         "layer": 2,
         "displayText": "Teleop",
         "variables": {}
@@ -88,7 +88,7 @@
           "id": "groundPickup",
           "displayText": "Ground",
           "gridArea": ["3", "8", "4", "10"],
-          "class": "lightpink",
+          "class": "pink",
           "type": "none",
           "executables": [
             {
