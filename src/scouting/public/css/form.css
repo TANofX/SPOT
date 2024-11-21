@@ -83,6 +83,11 @@
   height: 2em;
 }
 
+#form .form .demo {
+  font-size: 6em;
+  color: rgb(255, 0, 0)
+}
+
 @media screen and (min-height: 600px) {
   #form .form {
     width: 350px;
@@ -104,4 +109,5 @@
     width: 100%;
     margin: 12px 0;
   }
+
 }
