@@ -30,6 +30,7 @@
           "sort": -1,
           "unit": "s"
         },
+        
         {
           "name": "Accuracy",
           "path": "accuracy",
@@ -157,6 +158,28 @@
           "path": "counts.scoreAmp"
         }
       ]
+    }
+  },
+  {
+    "view":"team",
+    "module":"SingleDisplay",
+    "position":"main",
+    "name":"Misses and Drops",
+    "options":{
+      "path": "counts.missesAndDrops",
+      "aggrMethod": "sum",
+      "decimals": 2
+    }
+  },
+  {
+    "view":"team",
+    "module":"SingleDisplay",
+    "position":"main",
+    "name":"hit me!",
+    "options":{
+      "path": "counts.hitMe",
+      "aggrMethod": "sum",
+      "decimals": 2
     }
   },
   {

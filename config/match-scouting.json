@@ -269,6 +269,14 @@
           "type": "action",
           "executables": []
         },
+          {
+          "id": "hitMe",
+          "displayText": "hit me!",
+          "gridArea": ["1", "1", "9", "9"],
+          "class": "lightpink",
+          "type": "action",
+          "executables": []
+        },
         {
           "id": "drop",
           "displayText": "Drop",

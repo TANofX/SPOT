@@ -20,6 +20,7 @@
       ]
     }
   },
+   
   {
     "type": "tmp",
     "name": "sum",
@@ -395,6 +396,27 @@
     "outputPath": "scores.total",
     "options": {
       "addends": ["scores.auto", "scores.teleop", "scores.stage"]
+    }
+  },
+  {
+    "type": "team",
+    "name": "sum",
+    "outputPath": "counts.missesAndDrops",
+    "options": {
+      "addends": [
+        "counts.miss",
+        "counts.drop"
+      ]
+    }
+  },
+  {
+    "type": "team",
+    "name": "sum",
+    "outputPath": "counts.hitMe",
+    "options": {
+      "addends": [
+        "counts.hitMe"
+      ]
     }
   },
   {
