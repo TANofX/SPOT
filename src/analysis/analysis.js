@@ -5,6 +5,7 @@ let router = express.Router();
 const compareAllTeams = require("./autoPick.js");
 const { setPath } = require("../lib/util");
 const ss = require("simple-statistics");
+const executeAnalysisPipeline = require("./analysisPipeline.js");
 router.use(express.static(__dirname + "/public"));
 
 router.get("/", (req, res) => {
@@ -116,7 +117,7 @@ router.get("/transformers.js", async (req, res) => {
 });
 
 router.get("/autoPick", async (req, res) => {
-  let dataset = await execute();
+  let dataset = await executeAnalysisPipeline();
   let teams = [];
   for (const [teamNumber, team] of Object.entries(dataset.teams)) {
     if (
@@ -129,10 +130,7 @@ router.get("/autoPick", async (req, res) => {
   compareAllTeams(teams);
   res.send(
     teams.map((team) => {
-      return {
-        robotNumber: team.robotNumber,
-        avgProbability: team.avgProbability,
-      };
+      return {};
     })
   );
 });
