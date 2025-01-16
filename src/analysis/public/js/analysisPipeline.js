@@ -1,4 +1,4 @@
-async function executePipeline() {
+export async function executePipeline() {
   // Get tmps from database (or cache if offline)
   let tmps = await fetch("./api/dataset").then((res) => res.json());
 

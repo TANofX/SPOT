@@ -3,6 +3,11 @@
 const ss = require("simple-statistics");
 const { setPath, getPath } = require("../lib/util");
 
+import { executePipeline } from "./public/js/analysisPipeline.js";
+let dataset = await fetchData();
+executePipeline();
+let teams = [];
+
 function swap(arr, i, j) {
   let temp = arr[i];
   arr[i] = arr[j];
