@@ -152,8 +152,8 @@ if ("serviceWorker" in navigator) {
     console.log(teams);
     //console.log("teams type and size: " + typeof(teams)+teams.length+teams[0])
 
-    let teamsProbability = await fetch("/analysis/autoPick").then((res) =>
-      res.json()
+    let teamsProbability = await fetch("../../../analysis/autoPick.js").then(
+      (res) => res.json()
     );
     console.log("teams w/ avg probability");
     console.log(teamsProbability);
