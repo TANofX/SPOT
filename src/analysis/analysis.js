@@ -158,4 +158,28 @@ router.get("/modules.css", (req, res) => {
 
 router.use("/api", require("./routes/api.js"));
 
+router.get("/autoPick", async (req, res) => {
+  let dataset = await executeAnalysisPipeline();
+  let teams = [];
+  for (const [teamNumber, team] of Object.entries(dataset.teams)) {
+    if (
+      dataset.tmps.filter((tmp) => tmp.robotNumber == teamNumber).length > 0
+    ) {
+      setPath(team, "robotNumber", teamNumber);
+      teams.push(team);
+    }
+  }
+  compareAllTeams(teams);
+  res.send(
+    teams.map((team) => {
+      return {
+        robotNumber: team.robotNumber,
+        avgProbability: team.avgProbability,
+      };
+    })
+  );
+});
+
+router.use("/api", require("./routes/api.js"));
+
 module.exports = router;
