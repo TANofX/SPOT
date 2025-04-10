@@ -30,15 +30,11 @@ async function executePipeline() {
   const transformers = await getTransformers();
 
   for (let tfConfig of pipelineConfig) {
-    try {
-      dataset = transformers[tfConfig.type][tfConfig.name].execute(
-        dataset,
-        tfConfig.outputPath,
-        tfConfig.options
-      );
-    } catch (error) {
-      console.error(`Error executing transformer ${tfConfig.name}: ${error.message}`);
-    }
+    dataset = transformers[tfConfig.type][tfConfig.name].execute(
+      dataset,
+      tfConfig.outputPath,
+      tfConfig.options
+    );
   }
 
   dataset.tmps = dataset.tmps.concat(
