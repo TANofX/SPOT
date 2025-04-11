@@ -45,4 +45,8 @@ function setPath(obj, path, value) {
   return setPath(obj[path.shift()], path.join("."), value);
 }
 
+function normalizeName(key) {
+  
+}
+
 if (typeof module !== "undefined") module.exports = { getPath, setPath };

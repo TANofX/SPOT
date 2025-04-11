@@ -17,8 +17,10 @@
     "bluegreen",
     "darkbluegreen",
     "lightbluegreen",
+    "qrcode",
     "teleop",
-    "teleopl"
+    "teleopl",
+    "tmps"
   ],
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
