@@ -16,7 +16,7 @@
     }
   ],
   "ignore": ["_template.template.js", "transformers.md"],
-  "template2": {
+  "template2" : {
     "file": "_template2.template.js",
     "placeholder": "__TRANSFORMERS__"
   },
@@ -33,4 +33,5 @@
     }
   ],
   "ignore": ["_template2.template.js", "transformers.md"]
+  
 }

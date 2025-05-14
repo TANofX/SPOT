@@ -155,8 +155,9 @@ async function processTransformers() {
       if (match2) {
         // Add "identifier: new DataTransformer(...)" tp the transformer type's data,
         // plus a comma to allow for the next data transformer
-        transformerType2.data += `${file2.split(".")[0]
-          }: ${match2[1].trim()},\n`;
+        transformerType2.data += `${
+          file2.split(".")[0]
+        }: ${match2[1].trim()},\n`;
 
         // Would look something like:
         /*
@@ -193,7 +194,7 @@ async function processTransformers() {
     analysisTransformer2.template2.placeholder,
     conjugate2
   );
-  //console.log("Output : " + output);
+
   let temp = output2;
   const tempFilePath2 = path.join(__dirname, "transformers.js");
 

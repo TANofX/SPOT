@@ -60,3 +60,4 @@ async function executePipeline() {
 
   return dataset;
 }
+if (typeof module !== "undefined") module.exports = { executePipeline };
