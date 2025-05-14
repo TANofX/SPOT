@@ -8,6 +8,10 @@
 
 SPOT is an open-source modular scouting app framework for FRC developed by Team 3061 Huskie Robotics. SPOT provides a simple platform upon which a team can build a scouting app with little to no prior experience.
 
+## Fork information
+
+This fork was initially made to customize SPOT to our team's needs. It contains multiple new features, bug fixes(and new bugs) and changes only our team intend to use. But we have decided to make it public & continue maintaining this fork alongside the original repository.
+
 ## Features
 
 - An easy-to-use platform for data entry throughout matches.
